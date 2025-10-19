@@ -2,7 +2,7 @@ package utilities;
 
 import java.util.Scanner;
 
-public class InputOutput 
+public class IO 
 {
     private static final Scanner scanner = new Scanner(System.in);
 

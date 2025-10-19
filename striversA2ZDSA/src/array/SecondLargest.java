@@ -1,7 +1,7 @@
 package array;
 
 import utilities.Sort;
-import utilities.InputOutput;
+import utilities.IO;
 
 public class SecondLargest 
 {
@@ -25,17 +25,17 @@ public class SecondLargest
 	
 	public static void main(String[] args) 
 	{
-		int n = InputOutput.readInt("Enter number of elements: ");
+		int n = IO.readInt("Enter number of elements: ");
 		int[] arr = new int[n];
 
 		for (int i = 0; i < n; i++) 
 		{
-			arr[i] = InputOutput.readInt("Enter element " + (i + 1) + ": ");
+			arr[i] = IO.readInt("Enter element " + (i + 1) + ": ");
 		}
 		SecondLargest obj = new SecondLargest();
 		int secondLargestNumber = obj.meth(arr, n);
 
-		InputOutput.print("The largest element is: " + secondLargestNumber);
+		IO.print("The largest element is: " + secondLargestNumber);
 	}
 
 }
