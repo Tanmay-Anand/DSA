@@ -20,6 +20,7 @@ public class SecondLargest
 				break;
 			}
 		}
+		
 		return secondLargest;
 	}
 	
@@ -36,6 +37,7 @@ public class SecondLargest
 		int secondLargestNumber = obj.meth(arr, n);
 
 		IO.print("The largest element is: " + secondLargestNumber);
+		
 	}
 
 }

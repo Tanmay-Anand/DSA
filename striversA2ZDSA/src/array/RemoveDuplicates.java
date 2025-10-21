@@ -1,31 +1,33 @@
 package array;
 
+import java.util.Arrays;
+
+import utilities.Sort;
+
 public class RemoveDuplicates {
 	
 	public int[] meth(int[] arr, int n)
 	{
-		int[] arrFinal=new int[n];
+		int[] arrFinal=Sort.sortmeth(arr, n);
 		int i=0;
-		int k=0;
 		
-		for(int j=i+1;j<n;j++)
+		for(int j=1;j<n;j++)
 		{
-			if(arr[j] != arr[i])
+			if(arrFinal[j] != arrFinal[i])
 			{
-				arrFinal[k]=arr[j];
+				arrFinal[i+1] = arrFinal[j];
 				i++;
-				k++;
 			}
 		}
-	
-		
-		return arrFinal;
+
+		return Arrays.copyOf(arrFinal, i + 1);
+
 	}
 
 	public static void main(String[] args) 
 	{
 		RemoveDuplicates obj=new RemoveDuplicates();
-		int[] arr= {1,1,1,2,2,2,3,3,3}; //ALREADY SORTED ARRAY
+		int[] arr= {2,2,2,1,1,1,3,3,3};
 		int n=arr.length;
 		
 		int[] finalArray=obj.meth(arr, n);
